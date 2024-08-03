@@ -1,0 +1,51 @@
+Plataforma de Aprendizaje de Español para Extranjeros Usando ChatGPT
+
+Portada
+
+Nombre: Santiago Haspert Piaggio
+Curso: IA: Generación de Prompts
+ID de Comisión: 71380
+Nombre del Proyecto: Plataforma de Aprendizaje de Español para Extranjeros Usando ChatGPT
+Introducción
+
+Nombre del proyecto: Plataforma de Aprendizaje de Español para Extranjeros Usando ChatGPT.
+
+Presentación del problema a abordar:
+El aprendizaje de un nuevo idioma puede ser un desafío significativo para los extranjeros debido a la complejidad de la gramática, el vocabulario y la práctica efectiva. Muchas plataformas actuales no ofrecen un soporte adecuado para la corrección gramatical y la personalización de ejercicios. Este problema es relevante porque afecta la calidad del aprendizaje y la motivación de los estudiantes.
+Desarrollo de la propuesta de solución:
+Generación de contenido educativo personalizado:
+Chat GPT generará ejercicios de práctica y actividades interactivas basadas en el nivel de cada estudiante.
+Verificación gramatical de los ejercicios creados para asegurar la calidad del contenido.
+Asistencia en el desarrollo de la plataforma web:
+Uso de Chat GPT para resolver dudas de programación y optimizar el código de la plataforma.
+
+Implementación de un sistema de retroalimentación automática:
+Evaluación de las respuestas de los estudiantes y provisión de correcciones y sugerencias en tiempo real.
+
+Etapas de trabajo:
+Investigación de las necesidades de los estudiantes extranjeros que aprenden español.
+Desarrollo de la plataforma web utilizando tecnologías modernas.
+Integración de Chat GPT para la generación y verificación de contenido.
+Pruebas piloto con un grupo reducido de estudiantes y ajustes necesarios.
+Implementación final y monitoreo continuo.
+
+Justificación de la viabilidad del proyecto:
+La propuesta es técnicamente viable ya que contamos con acceso a Chat GPT para la generación y verificación de contenido, así como con las habilidades necesarias para desarrollar la plataforma web.
+Recursos: Disponemos del tiempo necesario para cada etapa del proyecto, acceso a plataformas tecnológicas adecuadas y la colaboración de expertos en la enseñanza del español como segunda lengua, que proporcionarán información valiosa durante el desarrollo del proyecto.
+Justificación: Desarrollar esta plataforma complementará significativamente el aprendizaje del español para extranjeros al ofrecer contenido personalizado, divertido y didáctico. Se utilizará Chat GPT para incrementar la eficiencia del desarrollo y calidad del proyecto.
+Objetivos
+
+Demostrar la comprensión de los principios y técnicas detrás de Fast Prompting.
+Experimentar con diferentes configuraciones de prompts para optimizar la eficacia.
+Preparar una demostración efectiva en el Jupyter Notebook para mostrar el funcionamiento de la POC.
+Analizar si las nuevas técnicas aprendidas permiten mejorar la propuesta de solución planteada en la Preentrega 1.
+Herramientas y Tecnologías
+
+Técnicas de prompting a utilizar:
+Generación de prompts personalizados según el nivel del estudiante.
+Verificación gramatical automática a través de prompts específicos.
+Optimización de respuestas de Chat GPT para la retroalimentación automática.
+Justificación de las técnicas:
+Generación de prompts personalizados: Permite adaptar los ejercicios al nivel y necesidades de cada estudiante, haciendo el aprendizaje más efectivo.
+Verificación gramatical automática: Asegura que los ejercicios y actividades sean correctos, mejorando la calidad del contenido.
+Optimización de respuestas: Proporciona una retroalimentación inmediata y precisa, lo que facilita el aprendizaje y la corrección de errores.
