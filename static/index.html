@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aprendizaje</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script defer src="/static/js/darkMode.js"></script>
+</head>
+<body>
+
+    <h1>Aprende idiomas con AI</h1>
+
+    <img src="/static/Media/robot.png" alt="50%" style="width: 200px">
+
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
+    <form id="languageForm">
+        <label for="fromLanguage">Desde (idioma que sabes):</label>
+        <select id="fromLanguage">
+            <option value="español">Español</option>
+            <option value="inglés">Inglés</option>
+            <option value="alemán">Alemán</option>
+            <option value="francés">Francés</option>
+            <option value="italiano">Italiano</option>
+        </select>
+
+        <label for="toLanguage">Aprender (idioma que quieres aprender):</label>
+        <select id="toLanguage">
+            <option value="español">Español</option>
+            <option value="inglés">Inglés</option>
+            <option value="alemán">Alemán</option>
+            <option value="francés">Francés</option>
+            <option value="italiano">Italiano</option>
+        </select>
+
+        <label for="difficulty">Nivel de Dificultad:</label>
+        <select id="difficulty">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+        </select>
+
+        <button type="button" onclick="generateExercise()">Generar Ejercicio</button>
+    </form>
+
+    <div id="exercise"></div>
+    <div id="apiResponse" style="display: none;"></div>
+
+    <script type="text/javascript">
+        async function generateExercise() {
+            const fromLanguage = document.getElementById('fromLanguage').value;
+            const toLanguage = document.getElementById('toLanguage').value;
+            const difficulty = document.getElementById('difficulty').value;
+
+            const payload = {
+                "idioma": toLanguage,
+                "nivel": difficulty
+            };
+
+            try {
+                const response = await fetch("/generar_ejercicio", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById('apiResponse').innerText = JSON.stringify(data, null, 2);
+                    document.getElementById('apiResponse').style.display = 'block';
+
+                    const answers = [
+                        { text: data.correcto.replace('opción A: ', ''), correct: true },
+                        { text: data.incorrecto1.replace('opción B: ', ''), correct: false },
+                        { text: data.incorrecto2.replace('opción C: ', ''), correct: false }
+                    ];
+
+                    // Shuffle the answers
+                    answers.sort(() => Math.random() - 0.5);
+
+                    const exerciseHTML = `
+                        <p>${data.pregunta}</p>
+                        ${answers.map(answer => `
+                            <div class="answer-option" onclick="checkAnswer(${answer.correct})">
+                                <button>${answer.text}</button>
+                            </div>
+                        `).join('')}
+                    `;
+                    document.getElementById('exercise').innerHTML = exerciseHTML;
+                } else {
+                    alert("Error: " + data.error);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Error al generar el ejercicio.");
+            }
+        }
+
+        function checkAnswer(isCorrect) {
+            if (isCorrect) {
+                alert("¡Felicitaciones, respuesta correcta!");
+            } else {
+                alert("Opción incorrecta, intente de nuevo.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

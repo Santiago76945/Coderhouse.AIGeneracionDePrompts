@@ -1,0 +1,7 @@
+A los fines de que la web funcione se debe:
+
+1. configurar correctamente la API Key.
+2. acceder al entorno virtual creado, en macOS: source env/bin/activate o crear uno nuevo con python -m venv env
+3. pip installa flask (servidor virtual para testeo)
+4. pip install openai==0.28.0
+5. python app.py (ejecutrar el servidor virtual)

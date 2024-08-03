@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/santiagohaspert/Library/Mobile Documents/com~apple~CloudDocs/Coderhouse/IA Generacion de Prompts/env/bin/python3.12" "$0" "$@"
+'''exec' "/Users/santiagohaspert/Library/Mobile Documents/com~apple~CloudDocs/Coderhouse/IA Generacion de Prompts/env/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

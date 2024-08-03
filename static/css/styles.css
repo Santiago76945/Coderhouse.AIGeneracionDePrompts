@@ -1,0 +1,116 @@
+/* styles.css */
+
+/* General settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the form */
+#languageForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form elements */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Dark Mode button */
+#darkModeToggle {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+#darkModeToggle:hover {
+    background-color: #222;
+}
+
+/* Exercise section */
+#exercise {
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+#exercise p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#exercise div {
+    margin-bottom: 10px;
+}
+
+#exercise button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#exercise button:hover {
+    background-color: #218838;
+}
+
+/* Response area */
+#apiResponse {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
